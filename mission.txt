@@ -1,0 +1,10 @@
+-------------- day_1 ---------------------------------20/11/2023
+-create game model  content  text and image and pdf_file
+- save text data  in data base  and pdf and image in file storge 
+- text and image is requred  and pdf not requred
+- delete data from  database and delete image and pdf connect with cell
+-download pdf if it is  available
+-rename pdf when it upload 
+-show data in page separated on click on open 
+add data not show in in form as description and date  as defoult value
+-search in data base 

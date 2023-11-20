@@ -13,6 +13,10 @@ python.exe -m pip install --upgrade pip
 django-admin startproject project .
 python manage.py startapp app
 
+------------------------------------
+python -m pip install Pillow
+          pip install djangorestframework
+          
 
 ------------------------------------
 
@@ -51,3 +55,13 @@ rm db.sqlite3
 
 
 --------------
+
+
+
+
+------apps------
+python manage.py startapp image_pdf_crud
+
+
+
+
