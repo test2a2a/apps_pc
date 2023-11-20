@@ -1,0 +1,53 @@
+python --version
+pip --version 
+django-admin --version
+
+
+-------------create vm+django-------------------
+
+
+python -m venv env             #env/
+env\Scripts\activate
+pip install django
+python.exe -m pip install --upgrade pip
+django-admin startproject project .
+python manage.py startapp app
+
+
+------------------------------------
+
+
+>>> python -m venv env
+>>> env\Scripts\activate
+pip install Django
+-------------open project-------------------
+
+--------------------------------
+conda activate django
+code .
+--------------------------------
+django-admin startproject project_name   #creat project name  
+python manage.py runserver            #runserver
+python manage.py migrate   # for update 18 unapplied migration(s)
+python manage.py startapp app   # for add app  name is pages
+
+python manage.py collectstatic       #static floder
+
+python manage.py createsuperuser    # create new user  (admen)
+
+python manage.py makemigrations  #add models in files django
+python manage.py migrate
+
+
+python manage.py sqlmigrate app 0001   #for show sql commend
+
+---------------------
+
+pip list
+pip freeze > requirements.txt
+pip3 install -r requirements.txt
+---------------------
+rm db.sqlite3
+
+
+--------------
