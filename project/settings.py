@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "crispy_forms",
     "crispy_bootstrap4",
+    "user",
     
 ]
 
@@ -94,6 +95,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 2,
+        }
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -119,7 +123,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_ROOT=os.path.join(BASE_DIR,'static')   #YOUSSEF
+STATIC_URL = '/static/'
+STATICFILES_DIRS=[    #YOUSSEF    
+    os.path.join(BASE_DIR,'project/static')
+]
 
 MEDIA_URL="/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,"media")
@@ -128,3 +136,5 @@ MEDIA_ROOT=os.path.join(BASE_DIR,"media")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"

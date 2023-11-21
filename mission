@@ -1,0 +1,7 @@
+--------------day1-------------21/11/2023
+create  login -logout-register-profile-layout-home-about templates
+create user app
+create register system for user (username-password-email)
+change in password_validation
+disapper help_texts show down  fieldes
+--------------------------------------
