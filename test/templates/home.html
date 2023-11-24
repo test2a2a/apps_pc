@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ {%  if type == "add" %}
+  <form  method="post">
+    {% csrf_token %}
+     {{form}}
+    <input type="submit" value="add">
+   </form>
+{%  elif type == "update" %}
+   <form   method="post">
+    {% csrf_token %}
+     {{form1}}
+    <input type="submit" value="update">
+   </form>
+{%   endif %}
+    <br>
+    <div>
+
+        <table>
+            <tr>
+              <th>id</th>
+              <th>text</th>
+              <th>n_ubdate</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+           
+                {% for i in data %}
+                <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.text}}</td>
+                <td>{{i.n_update}}</td>
+                <td><a href="{% url 'update' i.id %}">update</a></td>
+                <td><a href="{% url 'delete' i.id %}">delete</a></td>
+                 </tr>
+                {% endfor %}
+        
+          
+          
+          </table> 
+     
+
+    </div>
+</body>
+</html>
