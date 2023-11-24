@@ -51,3 +51,45 @@ rm db.sqlite3
 
 
 --------------
+
+
+
+
+
+django-admin startproject cinema_tickets_system
+
+--------------
+
+
+https://www.django-rest-framework.org/#installation
+
+pip install djangorestframework
+pip install django-filter
+============settings.py==========
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+]
+======urls.py=============
+urlpatterns = [
+    ...
+    path('api-auth/', include('rest_framework.urls'))
+]
+
+
+
+
+------------------------
+
+REST_FRAMEWORK = {  # <-----------
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+     'rest_framework.authentication.BasicAuthentication', #username and  password
+    #     'rest_framework.authentication.SessionAuthentication',
+    # ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+       'rest_framework.permissions.IsAuthenticated'  #AllowAny ,IsAuthenticated ,  IsAdminUser   ,  IsAuthenticatedOrReadOnly 
+
+    # ]
+
+}
+------------------------

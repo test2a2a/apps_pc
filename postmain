@@ -1,0 +1,30 @@
+==========fbv======================
+#3.1
+http://127.0.0.1:8000/fbv_move #get
+
+#3.1
+http://127.0.0.1:8000/fbv_move #post
+body -row -json or body- from data 
+  {
+        "id": 6,
+        "name": "Rab Ne Bana Di Jod2",
+        "hall": "A02",
+        "time": "6-9"
+    }
+
+============fbv by id====================
+#3.2
+http://127.0.0.1:8000/fbv_move_id/1 #get
+
+#3.2
+http://127.0.0.1:8000/fbv_move #put
+body -row -json or body- from data 
+{
+    "id": 1,    
+    "name": "The Crime",
+    "hall": "A01",
+    "time": "3-6"
+}
+
+#3.2
+http://127.0.0.1:8000/fbv_move_id/1 #delete
